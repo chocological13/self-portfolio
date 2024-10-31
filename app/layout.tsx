@@ -5,7 +5,7 @@ import NavBar from "@/components/sections/NavBar";
 import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
-  title: "Annisa's Journey",
+  title: "Nina's Journey",
   description: "Portfolio of My Journey",
 };
 
