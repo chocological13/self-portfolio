@@ -49,14 +49,14 @@ const Hero = () => {
             <Button
               variant="default"
               onClick={handleViewProjects}
-              className="bg-rose-600 hover:bg-rose-700 dark:bg-rose-700 dark:hover:bg-rose-800"
+              className="w-40 bg-rose-600 hover:bg-rose-700 dark:bg-rose-700 dark:hover:bg-rose-800"
             >
               View Projects
             </Button>
             <Button
               variant="outline"
               onClick={handleDownloadResume}
-              className="border-rose-200 dark:border-rose-800"
+              className="w-40 border-rose-200 dark:border-rose-800"
             >
               Download Resume
             </Button>
