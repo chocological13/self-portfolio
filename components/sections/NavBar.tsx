@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              My portfolio
+              My Portfolio
             </motion.span>
 
             {/* Desktop Navigation */}
