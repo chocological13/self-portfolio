@@ -33,7 +33,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-600 to-rose-400 dark:from-rose-500 dark:to-rose-300">
-              Annisa Mustofa
+              Nina Mustofa
             </h1>
             <p className="mt-4 text-xl sm:text-2xl text-gray-600 dark:text-gray-300">
               Software Engineer
@@ -74,7 +74,7 @@ const Hero = () => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2"
+          className="absolute inset-x-0 bottom-0 flex justify-center"
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
