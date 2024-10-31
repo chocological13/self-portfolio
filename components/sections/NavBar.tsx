@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import React, { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import { ScrollLink } from "@/components/scroll-link";
 
 const navItems = [
@@ -17,7 +16,6 @@ const navItems = [
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   // Handle hydration mismatch
   useEffect(() => {
@@ -37,7 +35,7 @@ const Navbar: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              YourName
+              My portfolio
             </motion.span>
 
             {/* Desktop Navigation */}

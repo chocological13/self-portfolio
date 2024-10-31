@@ -8,9 +8,21 @@ export const SocialLinks = () => {
   return (
     <div className="flex items-center gap-6">
       {[
-        { Icon: FaGithub, href: "#", label: "GitHub" },
-        { Icon: FaLinkedin, href: "#", label: "LinkedIn" },
-        { Icon: Mail, href: "mailto:your@email.com", label: "Email" },
+        {
+          Icon: FaGithub,
+          href: "https://github.com/chocological13",
+          label: "GitHub",
+        },
+        {
+          Icon: FaLinkedin,
+          href: "https://www.linkedin.com/in/annisamustofa/",
+          label: "LinkedIn",
+        },
+        {
+          Icon: Mail,
+          href: "mailto:annisamustofa@outlook.com",
+          label: "Email",
+        },
       ].map(({ Icon, href, label }) => (
         <motion.a
           key={label}

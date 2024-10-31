@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex flex-col items-center gap-2">
             <h3 className="text-lg font-semibold text-rose-500">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
           </div>
 
