@@ -25,6 +25,8 @@ const Footer: React.FC = () => {
               <a
                 href="https://www.flaticon.com/free-icons/strawberry"
                 title="strawberry icons"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Strawberry icons created by Freepik - Flaticon
               </a>

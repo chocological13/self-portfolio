@@ -27,6 +27,8 @@ export const SocialLinks = () => {
         <motion.a
           key={label}
           href={href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-600 dark:text-gray-400 hover:text-rose-600 dark:hover:text-rose-400"
           whileHover={{ y: -4 }}
           whileTap={{ y: 0 }}

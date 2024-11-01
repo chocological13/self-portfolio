@@ -114,5 +114,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-// redeploy test
