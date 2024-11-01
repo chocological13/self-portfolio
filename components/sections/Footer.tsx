@@ -19,6 +19,17 @@ const Footer: React.FC = () => {
           <div className="flex justify-center gap-6">
             <SocialLinks />
           </div>
+
+          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p className="flex items-center justify-center text-xs">
+              <a
+                href="https://www.flaticon.com/free-icons/strawberry"
+                title="strawberry icons"
+              >
+                Strawberry icons created by Freepik - Flaticon
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
