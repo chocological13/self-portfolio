@@ -1,19 +1,28 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "@/components/social-links";
 import { ScrollLink } from "@/components/scroll-link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Hero = () => {
   const handleViewProjects = () => {
     document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleDownloadResume = () => {
-    window.open(
-      "https://docs.google.com/document/d/1I4PCZXCGttw-IGkF21GbD1Csog9m-Xg_xrDtVtp8kcY/export?format=pdf",
-    );
+  const handleDownloadResume = (type: "creative" | "ats") => {
+    const resumeLinks = {
+      creative: process.env.NEXT_PUBLIC_DOWNLOAD_CREATIVE_CV,
+      ats: process.env.NEXT_PUBLIC_DOWNLOAD_ATS_CV,
+    };
+
+    window.open(resumeLinks[type]);
   };
 
   return (
@@ -38,6 +47,9 @@ const Hero = () => {
             <p className="mt-4 text-xl sm:text-2xl text-gray-600 dark:text-gray-300">
               Software Engineer
             </p>
+            <p className="mt-2 text-xs sm:text-sm text-gray-400 dark:text-gray-300">
+              Turning coffee into code and snacking on strawberries ☕🍓
+            </p>
           </motion.div>
 
           <motion.div
@@ -49,17 +61,31 @@ const Hero = () => {
             <Button
               variant="default"
               onClick={handleViewProjects}
-              className="w-40 bg-rose-600 hover:bg-rose-700 dark:bg-rose-700 dark:hover:bg-rose-800"
+              className="w-44 bg-rose-600 hover:bg-rose-700 dark:bg-rose-700 dark:hover:bg-rose-800"
             >
               View Projects
             </Button>
-            <Button
-              variant="outline"
-              onClick={handleDownloadResume}
-              className="w-40 border-rose-200 dark:border-rose-800"
-            >
-              Download Resume
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="w-44 border-rose-200 dark:border-rose-800 flex justify-between items-center"
+                >
+                  Download Resume
+                  <ChevronDown className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-40">
+                <DropdownMenuItem onClick={() => handleDownloadResume("ats")}>
+                  ATS Friendly
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleDownloadResume("creative")}
+                >
+                  Creative CV
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </motion.div>
 
           <motion.div

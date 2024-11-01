@@ -10,17 +10,17 @@ export const SocialLinks = () => {
       {[
         {
           Icon: FaGithub,
-          href: "https://github.com/chocological13",
+          href: process.env.NEXT_PUBLIC_GITHUB_URL,
           label: "GitHub",
         },
         {
           Icon: FaLinkedin,
-          href: "https://www.linkedin.com/in/annisamustofa/",
+          href: process.env.NEXT_PUBLIC_LINKEDIN_URL,
           label: "LinkedIn",
         },
         {
           Icon: Mail,
-          href: "mailto:annisamustofa@outlook.com",
+          href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
           label: "Email",
         },
       ].map(({ Icon, href, label }) => (

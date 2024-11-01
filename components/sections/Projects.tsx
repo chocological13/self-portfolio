@@ -10,29 +10,38 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Property Management System (StayEase)",
+    title: "StayEase - Property Renting App",
     description:
       "Full-stack development of core features including user authentication, authorization, profile management, and property management modules. Implemented secure role-based access control and streamlined property listing workflows.",
     tech: [
-      "Next.js",
-      "TypeScript",
+      "Java",
       "Spring Boot",
       "PostgreSQL",
       "JWT",
       "REST API",
+      "Next.js",
+      "TypeScript",
     ],
     metrics:
       "Supported multiple user roles with secure authentication, efficient property listing and management workflows with search and filter options, and robust access control for enhanced user experience and dynamic rate adjustments",
-    github: "https://github.com/fp-stayease/repositories",
+    github: process.env.NEXT_PUBLIC_GITHUB_STAYEASE,
   },
   {
     title: "Event Management Service",
     description:
       "Developed a scalable backend service for event management using Spring Boot. Implemented caching with Redis to improve response times and deployed the application on Google Cloud Platform.",
-    tech: ["Java", "Spring Boot", "PostgreSQL", "Redis", "REST API", "Maven"],
+    tech: [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Redis",
+      "JWT",
+      "REST API",
+      "Maven",
+    ],
     metrics:
       "Enabled seamless event browsing and ticket purchasing, supporting multiple user roles with secure access control and performance improvements through caching",
-    github: "https://github.com/chocological13/eventastic",
+    github: `${process.env.NEXT_PUBLIC_GITHUB_URL}${process.env.NEXT_PUBLIC_GITHUB_EVENTASTIC}`,
   },
   {
     title: "Company Profile Website",
@@ -40,7 +49,7 @@ const projects = [
       "Modern company profile website built with Next.js and TypeScript. Features responsive design, optimized performance, and seamless user experience.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     metrics: "Responsive design with optimized performance scores",
-    github: "https://github.com/chocological13/rage-quit",
+    github: `${process.env.NEXT_PUBLIC_GITHUB_URL}${process.env.NEXT_PUBLIC_GITHUB_RAGEQUIT}`,
   },
   {
     title: "Visit my GitHub page to view more!",
@@ -55,7 +64,7 @@ const projects = [
       "..and more.",
     ],
     metrics: "A compilation of my codebase.",
-    github: "https://github.com/chocological13",
+    github: process.env.NEXT_PUBLIC_GITHUB_URL,
   },
 ];
 
