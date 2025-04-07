@@ -3,31 +3,10 @@
 import { motion } from "framer-motion";
 import { SkillCard } from "@/components/skill-card";
 import { CategoryCard } from "@/components/category-card";
+import React from "react";
+import { technologies } from "@/constants/technologies";
 
-const technologies = {
-  Backend: [
-    { name: "Java", level: "Intermediate" },
-    { name: "PostgreSQL", level: "Intermediate" },
-    { name: "Spring Boot", level: "Intermediate" },
-    { name: "JWT", level: "Intermediate" },
-    { name: "Redis", level: "Intermediate" },
-  ],
-  Frontend: [
-    { name: "React", level: "Intermediate" },
-    { name: "TypeScript", level: "Intermediate" },
-    { name: "JavaScript (Vanilla)", level: "Intermediate" },
-    { name: "Next.js", level: "Intermediate" },
-    { name: "Tailwind CSS", level: "Intermediate" },
-  ],
-  "DevOps & Tools": [
-    { name: "Docker", level: "Intermediate" },
-    { name: "Git", level: "Intermediate" },
-    { name: "Postman", level: "Intermediate" },
-    { name: "Vercel", level: "Intermediate" },
-  ],
-};
-
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 px-8">
       <motion.div
